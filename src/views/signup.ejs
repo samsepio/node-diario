@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+        <head>
+                <meta charset="utf-8">
+                <meta name="author"content="walter">
+                <title>Comparate</title>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        </head>
+        <body>
+                <nav class="navbar navbar-light bg-light">
+                        <a class="navbar-brand mb-0 h1"href="/">Inicio</a>
+                        <a class="navbar-brand mb-0 h1"href="/signup">Registrate</a>
+                        <a class="navbar-brand mb-0 h1"href="/signin">Inicia Secion</a>
+                </nav>
+		<br><center><h1>Registrate</h1></center>
+		<div class="card mx-auto" style="width: 18rem;">
+			<div class="card-body mx-auto">
+				<form action="/signup"method="POST">
+					<label>Correo</label>
+					<input type="email"name="email"class="form-control"placeholder="Ingrese Su Correo">
+					<label>Nombre</label>
+					<input type="text"name="name"class="form-control"placeholder="Ingrese Su Nombre">
+					<label>Apellido</label>
+					<input type="text"name="last"class="form-control"placeholder="Ingrese Su Apellido">
+					<label>Contraseña</label>
+					<input type="password"name="password"class="form-control"placeholder="Ingrese Una Contraseña">
+					<button class="btn btn-primary btn-block"type="submit">Registrarme</button>
+					<a href="/signin"class="card-link">Ya Tengo Mi Cuenta</a>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

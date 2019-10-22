@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+        <head>
+                <meta charset="utf-8">
+                <meta name="author"content="walter">
+                <title>Comparate</title>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        </head>
+        <body>
+                <nav class="navbar navbar-light bg-light">
+			<a class="navbar-brand mb-0 h1"href="/config">Configuraciones</a>
+                        <a class="navbar-brand mb-0 h1 mx-auto"href="/">salir</a>
+                        <a class="navbar-brand mb-0 h1 mx-auto"href="/notes">Notas</a>
+                </nav>
+		<br><center><h1>Tu Nota</h1></center> 
+		<div class="card mx-auto" style="width: 18rem;">
+			<div class="card-body mx-auto">
+				<form action="/diario"method="POST">
+                                        <label>Titulo</label>
+					<input type="text"name="title"class="form-control"placeholder="Titulo De La Nota">
+					<label>Nota</label>
+					<textarea type="text"name="note"class="form-control"placeholder="Inserte Su Nota"></textarea>
+                                        <button class="btn btn-primary btn-block"type="submit">Agregar Nota</button>
+                                </form>
+			</div>
+		</div>
+	</body>
+</html>
