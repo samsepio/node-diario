@@ -4,6 +4,7 @@
                 <meta charset="utf-8">
                 <meta name="author"content="walter">
                 <title>Comparate</title>
+		<link rel="stylesheet"href="/css/main.css">
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         </head>
         <body>
@@ -13,11 +14,16 @@
                         <a class="navbar-brand mb-0 h1 mx-auto"href="/notes">Notas</a>
                 </nav>
 		<br><center><h1>Tus Notas</h1></center>
+		<% notes.forEach(function (note) { %>
 		<div class="card" style="width: 25rem;">
 			<div class="card-body">
-				<h4 class="card-text"></h4>
-				<p class="card-text"></p>
+				<h4 class="card-text"><%= note.title  %></h4>
+				<p class="card-text"><%=  note.note  %></p>
+				<a class="btn <%= note.status ? 'btn-success':'btn-dark'%>"href="/gusta/<%= note._id %>">Favorita</a>
+				<a class="btn btn-danger"href="/delete/<%= note._id %>">Eliminar</a>
+				<a class="btn btn-info"href="/edit/<%= note._id %>">Editar</a>
 			</div>
 		</div>
+		<% }) %>
 	</body>
 </html>
